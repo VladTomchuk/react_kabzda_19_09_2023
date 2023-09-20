@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import {Accordion} from "./components/Accordion";
+import {Rating} from "./components/Rating";
 
 const App = () => {
     return (
@@ -8,39 +10,6 @@ const App = () => {
             <Accordion/>
         </div>
     );
-}
-
-const Rating = () => {
-    return (
-        <div>
-           <Star/>
-           <Star/>
-           <Star/>
-           <Star/>
-           <Star/>
-        </div>
-    )
-}
-
-const Star = () => {
-    return (
-        <div>
-            <div>Star</div>
-        </div>
-    )
-}
-
-const Accordion = () => {
-    return (
-        <div>
-            <h3>Menu</h3>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
-        </div>
-    )
 }
 
 export default App;
