@@ -6,7 +6,13 @@ import {Rating} from "./components/Rating";
 const App = () => {
     return (
         <div className="App">
-            <Rating/>
+            <div>Article 1</div>
+            <Rating value={0}/>
+            <Rating value={1}/>
+            <Rating value={2}/>
+            <Rating value={3}/>
+            <Rating value={4}/>
+            <Rating value={5}/>
             <Accordion/>
         </div>
     );
