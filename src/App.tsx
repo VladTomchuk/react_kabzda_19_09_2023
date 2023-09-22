@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import {OnOff} from "./components/OnOff";
+import {Accordion} from "./components/Accordion";
 
 const App = () => {
     return (
@@ -16,8 +17,8 @@ const App = () => {
             {/*<Rating value={3}/>*/}
             {/*<Rating value={4}/>*/}
             {/*<Rating value={5}/>*/}
-            {/*<Accordion title={"Menu"} collapsed={true}/>*/}
-            {/*<Accordion title={"Users"} collapsed={false}/>*/}
+            <Accordion title={"Menu"}/>
+            <Accordion title={"Users"}/>
         </div>
     );
 }
