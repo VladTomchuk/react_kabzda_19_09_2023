@@ -9,6 +9,10 @@ export const OnOff = (props: OnOffPropsType) => {
 
     let [on, setOn] = useState(false)
 
+    const onOffContainer = {
+        padding: "15px"
+    }
+
     const onStyle = {
         width: "30px",
         height: "20px",
@@ -37,7 +41,7 @@ export const OnOff = (props: OnOffPropsType) => {
     }
 
     return (
-        <div>
+        <div style={onOffContainer}>
             <div style={onStyle} onClick={() => {
                 setOn(true)
             }}>On
