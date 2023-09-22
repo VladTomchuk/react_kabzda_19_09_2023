@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {MouseEventHandler, useState} from "react";
 
 type RatingPropsType = {
     value: 0 | 1 | 2 | 3 | 4 | 5
@@ -10,23 +10,23 @@ export const Rating = (props: RatingPropsType) => {
 
     return (
         <div>
-            <Star selected={rate > 0}/><button onClick={()=>{setRate(1)}}>1</button>
-            <Star selected={rate > 1}/><button onClick={()=>{setRate(2)}}>2</button>
-            <Star selected={rate > 2}/><button onClick={()=>{setRate(3)}}>3</button>
-            <Star selected={rate > 3}/><button onClick={()=>{setRate(4)}}>4</button>
-            <Star selected={rate > 4}/><button onClick={()=>{setRate(5)}}>5</button>
+            <Star selected={rate > 0} value={1} setRate={setRate}/>
+            <Star selected={rate > 1} value={2} setRate={setRate}/>
+            <Star selected={rate > 2} value={3} setRate={setRate}/>
+            <Star selected={rate > 3} value={4} setRate={setRate}/>
+            <Star selected={rate > 4} value={5} setRate={setRate}/>
         </div>
     )
 }
 
 type StarPropsType = {
     selected: boolean
+    value: 1 | 2 | 3 | 4 | 5
+    setRate: (value: 1 | 2 | 3 | 4 | 5) => void
 }
 
 const Star = (props: StarPropsType) => {
-    if (props.selected) {
-        return <span><b>Star </b></span>
-    } else {
-        return <span>Star </span>
-    }
+    return <span onClick={() => {props.setRate(props.value)}}>
+        {props.selected ? <b>Star </b> : "Star "}
+    </span>
 }
