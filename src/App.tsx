@@ -1,24 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {OnOff} from "./components/OnOff";
-import {Accordion} from "./components/Accordion";
-import {Rating} from "./components/Rating";
+import {UnControlledAccordion} from "./components/Accordion/UnControlledAccordion";
+import {UnControlledRating} from "./components/Rating/UnControlledRating";
+import {ControlledAccordion} from "./components/Accordion/ControlledAccordion";
+import {ControlledRating, RatingValuesType} from "./components/Rating/ControlledRating";
 
 const App = () => {
+
+    let [ratingValue, setRatingValue] = useState<RatingValuesType>(0)
+
     return (
         <div className="App">
 
-            <Rating value={5}/>
+            <ControlledAccordion title={"Controlled"}/>
+            <ControlledRating value={ratingValue} onClick={setRatingValue}/>
+
             <OnOff/>
             {/*<PageTitle title={"This is my first article"}/>*/}
             {/*<div><h3>Article 1</h3></div>*/}
-            {/*<Rating value={0}/>*/}
-            {/*<Rating value={1}/>*/}
-            {/*<Rating value={2}/>*/}
-            {/*<Rating value={3}/>*/}
-            {/*<Rating value={4}/>*/}
-            <Accordion title={"Menu"}/>
-            <Accordion title={"Users"}/>
+
+            {/*<UnControlledAccordion title={"UnControlled"}/>*/}
+            {/*<UnControlledRating/>*/}
 
 
         </div>
@@ -26,13 +29,13 @@ const App = () => {
 }
 
 
-type PageTitlePropsType = {
-    title: string
-}
+// type PageTitlePropsType = {
+//     title: string
+// }
 
-const PageTitle = (props: PageTitlePropsType) => {
-    return (
-        <div><h1>{props.title}</h1></div>
-    )
-}
+// const PageTitle = (props: PageTitlePropsType) => {
+//     return (
+//         <div><h1>{props.title}</h1></div>
+//     )
+// }
 export default App;
