@@ -5,7 +5,8 @@ import {OnOff} from "./components/OnOff";
 const App = () => {
     return (
         <div className="App">
-            <OnOff switcher={false}/>
+            <OnOff/>
+
 
             {/*<PageTitle title={"This is my first article"}/>*/}
             {/*<div><h3>Article 1</h3></div>*/}
