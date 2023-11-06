@@ -12,7 +12,6 @@ export const OnOff = (props: OnOffPropsType) => {
     const onOffContainer = {
         padding: "15px"
     }
-
     const onStyle = {
         width: "30px",
         height: "20px",

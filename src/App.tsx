@@ -28,15 +28,4 @@ const App = () => {
         </div>
     );
 }
-
-
-// type PageTitlePropsType = {
-//     title: string
-// }
-
-// const PageTitle = (props: PageTitlePropsType) => {
-//     return (
-//         <div><h1>{props.title}</h1></div>
-//     )
-// }
 export default App;

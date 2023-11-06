@@ -11,7 +11,6 @@ export const OnOff = (props: OnOffPropsType) => {
     const onOffContainer = {
         padding: "15px"
     }
-
     const onStyle = {
         width: "30px",
         height: "20px",
@@ -39,15 +38,19 @@ export const OnOff = (props: OnOffPropsType) => {
         backgroundColor: props.on ? "green" : "red"
     }
 
+    const onClicked = () => {
+        props.setOn(true)
+    }
+
+    const offClicked = () => {
+        props.setOn(false)
+    }
+
     return (
         <div style={onOffContainer}>
-            <div style={onStyle} onClick={() => {
-                props.setOn(true)
-            }}>On
+            <div style={onStyle} onClick={onClicked}>On
             </div>
-            <div style={offStyle} onClick={() => {
-                props.setOn(false)
-            }}>Off
+            <div style={offStyle} onClick={offClicked}>Off
             </div>
             <div style={indicatorStyle}></div>
         </div>
