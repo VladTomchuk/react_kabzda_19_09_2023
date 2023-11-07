@@ -19,8 +19,6 @@ const App = () => {
             }}/>
             <ControlledRating value={ratingValue} onClick={setRatingValue}/>
             <OnOff on={on} setOn={(on)=>{setOn(on)}}/>
-            {/*<PageTitle title={"This is my first article"}/>*/}
-            {/*<div><h3>Article 1</h3></div>*/}
 
             {/*<UnControlledAccordion title={"UnControlled"}/>*/}
             {/*<UnControlledRating/>*/}

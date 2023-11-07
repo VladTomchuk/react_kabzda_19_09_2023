@@ -41,7 +41,6 @@ export const OnOff = (props: OnOffPropsType) => {
     const onClicked = () => {
         props.setOn(true)
     }
-
     const offClicked = () => {
         props.setOn(false)
     }

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 
 
 type AccordionPropsType = {
@@ -7,9 +7,6 @@ type AccordionPropsType = {
     setCollapsed: () => void
 }
 export const ControlledAccordion = (props: AccordionPropsType) => {
-
-    //let [collapsed, setCollapsed] = useState(true)
-
     return (
         <div>
             <AccordionTitle setCollapsed={props.setCollapsed} title={props.title}/>
@@ -24,11 +21,8 @@ type AccordionTitlePropsType = {
 }
 
 const AccordionTitle = (props: AccordionTitlePropsType) => {
-    return <h3 onClick={
-        props.setCollapsed
-    }>{props.title}</h3>
+    return <h3 onClick={(e)=> props.setCollapsed()}>{props.title}</h3>
 }
-
 const AccordionBody = () => {
     return (
         <ul>
